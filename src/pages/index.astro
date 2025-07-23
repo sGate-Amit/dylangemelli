@@ -1,50 +1,536 @@
----
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
----
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home - Dylan Gemelli</title>
+    <meta name="description" content="Welcome to the Home of Dyalan Gemelli! I'm happy to have you with me on this journey.">
+    <meta name="keywords" content="">
+    <meta name="author" content="https://dylangemelli.com"> 
+	
+	<!-- ==============================================
+	Favicons
+	=============================================== -->
+	<link rel="shortcut icon" href="images/Dylan-Gemelli.png">
+	<link rel="apple-touch-icon" href="images/Dylan-Gemelli.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/Dylan-Gemelli.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/Dylan-Gemelli.png">
+	
+	<!-- ==============================================
+	CSS VENDOR
+	=============================================== -->
+	<link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/vendor/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/vendor/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="css/vendor/owl.theme.default.min.css">
+	<link rel="stylesheet" type="text/css" href="css/vendor/magnific-popup.css">
+	<link rel="stylesheet" type="text/css" href="css/vendor/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="css/vendor/bootstrap-dropdownhover.min.css">
+	
+	<!-- ==============================================
+	Custom Stylesheet
+	=============================================== -->
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+    <script type="text/javascript" src="js/vendor/modernizr.min.js"></script>
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+</head>
+
+<body>
+
+	<!-- LOAD PAGE -->
+	<div class="animationload">
+		<div class="loader"></div>
+	</div>
+	
+	<!-- BACK TO TOP SECTION -->
+	<a href="#0" class="cd-top cd-is-visible cd-fade-out">Top</a>
+
+	<!-- HEADER -->
+    <div class="header header-1">
+    	<!-- TOPBAR -->
+		<div class="topbar">
+			<div class="container">
+				
+
+				<div class="contact-info">
+					<!-- INFO 1 -->
+					<div class="box-icon-1">
+						<div class="icon">
+							<div class="fa fa-envelope-o"></div>
+						</div>
+						<div class="body-content">
+							<div class="heading">Email Support</div>
+							dylan@dylangemelli.com
+						</div>
+					</div>
+					<!-- INFO 2 -->
+					<div class="box-icon-1">
+						<div class="icon">
+							<div class="fa fa-phone"></div>
+						</div>
+						<div class="body-content">
+							<div class="heading">Call Support</div>
+							+62 123 6700 411
+						</div>
+					</div>
+					<!-- INFO 3 -->
+					<div class="box-icon-1">
+						<div class="icon">
+							<div class="fa fa-clock-o"></div>
+						</div>
+						<div class="body-content">
+							<div class="heading">Operating Hours</div>
+							Mon - Fri 08:00 - 17:00
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+		<!-- NAVBAR SECTION -->
+		<div class="navbar navbar-main">
+		
+			<div class="container container-nav">
+				<div class="row">
+						
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						
+					</div>
+
+					<a class="navbar-brand" href="/">DylanGemelli.com</a>
+
+					<nav class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations="fadeInDown fadeInRight fadeInUp fadeInLeft">
+						<ul class="nav navbar-nav">
+							<li class="dropdown"><a href="/">Home</a></li>
+							<li><a href="/about">About</a></li>
+							<li><a href="/podcasts">Podcasts</a></li>
+							<li><a href="/dylan-picks">Dylan's Picks</a></li>
+							<li><a href="/videos">Videos</a></li>
+							<li><a href="/blogs">Blogs</a></li>
+							<li><a href="/ebooks">eBooks</a></li>
+							<li><a href="/contact">Contact</a></li>
+							<li><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdJBqxqkrX2qTNMwSNp6QukDgkAkDFeE-ghQsuOtt8-zQXp3g/viewform">Collaboration Opportunities</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+	    </div>
+    </div>
+ 
+	<!-- BANNER -->
+	<div id="slides" class="section banner">
+		<ul class="slides-container">
+			<li>
+				<img src="images/Dylan-Gemelli-YT-Banner-(1546x423 px)-(1024x756 px).png" alt="DylanGemelli.com">
+				<div class="overlay-bg"></div>
+				<div class="container">
+				</div>
+			</li>	
+		</ul>
+
+		<nav class="slides-navigation">
+			<div class="container">
+				<a href="#" class="next">
+					<i class="fa fa-chevron-right"></i>
+				</a>
+				<a href="#" class="prev">
+					<i class="fa fa-chevron-left"></i>
+				</a>
+	      	</div>
+	    </nav>
+		
+	</div>
+
+	<!-- SHORTCUT -->
+	<div class="section feature bg-light">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-sm-12 col-md-12">
+					<div class="row">
+						<div class="col-sm-4 col-md-4">
+							<!-- BOX 1 -->
+							<div class="feature-box-8">
+								<div class="media">
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/4WKUNhpcsQk?si=csQ4TkU9CsQfcucM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+								</div>
+								<div class="body">
+									<a target="_blank" href="https://www.youtube.com/watch?v=4WKUNhpcsQk" class="title">Miesha Tate joins Dylan Gemelli to discuss their faith and relationship with God</a>
+									<a target="_blank" href="https://www.youtube.com/watch?v=4WKUNhpcsQk" class="more"><i class="fa fa-angle-right"></i></a>
+								</div>
+				            </div>
+						</div>
+						<div class="col-sm-4 col-md-4">
+							<!-- BOX 2 -->
+							<div class="feature-box-8">
+								<div class="media">
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/4MLGAwwr8Gg?si=wHtF2-8qupmzCFOV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+								</div>
+								<div class="body">
+									<a target="_blank" href="https://www.youtube.com/watch?v=4MLGAwwr8Gg" class="title">Power Duo: DYLAN GEMELLI and KENNY KO Podcast Premiere</a>
+									<a target="_blank" href="https://www.youtube.com/watch?v=4MLGAwwr8Gg" class="more"><i class="fa fa-angle-right"></i></a>
+								</div>
+				            </div>
+						</div>
+						<div class="col-sm-4 col-md-4">
+							<!-- BOX 3 -->
+							<div class="feature-box-8">
+								<div class="media">
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/5u2vsiH8MFM?si=jqG6p8g3Bjoitx_q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+								</div>
+								<div class="body">
+									<a target="_blank" href="https://www.youtube.com/watch?v=5u2vsiH8MFM&pp=0gcJCcwJAYcqIYzv" class="title">Mind-Blowing Revelations from Dylan Gemelli's Podcast ft. Mark Harley</a>
+									<a target="_blank" href="https://www.youtube.com/watch?v=5u2vsiH8MFM&pp=0gcJCcwJAYcqIYzv" class="more"><i class="fa fa-angle-right"></i></a>
+								</div>
+				            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	 
+	
+
+	<!-- ABOUT -->
+	<div class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-6">
+
+					<h2 class="section-heading">Dylan Gemelli</h2>
+					<h1 class="jumbolead reset-section-heading">Welcome to my official website!</h1> 
+					<p>I'm Dylan Gemelli, and I'm here to immerse you in the world of fitness and biohacking. Through the Dylan Gemelli Podcast, I engage with leading health and wellness experts, sharing insights that leverage the latest in fitness and longevity strategies. As I work towards a master's degree in dietetics and certifications in integrative and cellular health, I look forward to sharing valuable knowledge and practical tips with you.</p> 
+					
+				</div>
+				<div class="col-sm-6 col-md-6">
+					<div class="vidimg">
+						<div class="play-vid">
+							<a class="popup-youtube" href="https://www.youtube.com/watch?v=9un0CTAJky0"><span class="fa fa-play fa-2x playvid"></span></a>
+						</div>
+						<img src="images/dylan-img.png" alt="" class="img-responsive">
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- CTA -->
+	<div class="section cta bg-overlay-1">
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-sm-12 col-md-12">
+					<div class="cta-info">
+						<i class="fa fa-leaf fa-3x"></i>
+						<h3>Thank you for visiting!</h3>
+						<p>As a dedicated educator on TRT, peptides, SARMs, and supplements, I've grown my Instagram following to over 1.5 million and manage a thriving YouTube channel with thousands of subscribers focused on biohacking. My podcast, featuring guests like Dr. Steven Gundry and Miesha Tate, is available on major platforms like Apple and Spotify. I've also had the honor of speaking at the 60th anniversary of Mr. Olympia. Motivated by my faith and family, my goal is to inspire and enhance the health and wellness of everyone who visits.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	 
+	<!-- STATS -->
+	<div class="section statistic bg-overlay-2">
+		<div class="container">
+			<div class="col-sm-4 col-md-4">
+				<h2 class="jumbolead"> Build A Perfect Health MINDSET</h2> 
+			</div>
+			<div class="col-sm-8 col-md-8">
+				<div class="row">
+				
+					<div class="col-sm-4 col-md-4">
+						<div class="counter-1">
+				            <div class="counter-number">3+</div>
+				            <div class="counter-title"> Certificate trainer</div>
+			          	</div>
+					</div>
+					<div class="col-sm-4 col-md-4">
+						<div class="counter-1">
+				            <div class="counter-number">20+</div>
+				            <div class="counter-title"> Years Experience </div>
+			          	</div>
+					</div>
+					
+					<div class="col-sm-4 col-md-4">
+						<div class="counter-1">
+				            <div class="counter-number">550+</div>
+				            <div class="counter-title">Loyal Client</div>
+			          	</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- SERVICES -->
+	<div class="section section-border">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-12">
+					<h2 class="section-heading">Benefits of Personal Training</h2>
+				</div>
+				<div class="col-sm-12 col-md-12">
+					<div class="row tes">
+						<!-- Item 1 -->
+						<div class="col-sm-3 col-md-3">
+							<div class="box-icon-3">
+								<div class="icon">
+									<div class="fa fa-leaf fa-2x"></div>
+								</div>
+								<h5 class="heading">Nutrition Strategies</h5>
+								<div class="body-content">
+									<i class="fa fa-circle-o"></i>
+									<p>As a personal trainer, I recommend focusing on balanced, nutrient-dense meals to fuel your workouts and recovery. </p>
+								</div>
+							</div>
+							<div class="spacer-30"></div>
+						</div>
+						<!-- Item 2 -->
+						<div class="col-sm-3 col-md-3">
+							<div class="box-icon-3">
+								<div class="icon">
+									<div class="fa fa-graduation-cap fa-2x"></div>
+								</div>
+								<h5 class="heading">Workout Routines</h5>
+								<div class="body-content">
+									<i class="fa fa-circle-o"></i>
+									<p>I suggest starting with a well-rounded workout routine that includes both strength training and cardiovascular exercises.</p>
+								</div>
+							</div>
+							<div class="spacer-30"></div>
+						</div>
+						<!-- Item 3 -->
+						<div class="col-sm-3 col-md-3">
+							<div class="box-icon-3">
+								<div class="icon">
+									<div class="fa fa-heart fa-2x"></div>
+								</div>
+								<h5 class="heading">Individual Support</h5>
+								<div class="body-content">
+									<i class="fa fa-circle-o"></i>
+									<p>As your personal trainer, my role is to provide you with tailored support and guidance to help you achieve your fitness goals.</p>
+								</div>
+							</div>
+							<div class="spacer-30"></div>
+						</div>
+						<!-- Item 4 -->
+						<div class="col-sm-3 col-md-3">
+							<div class="box-icon-3">
+								<div class="icon">
+									<div class="fa fa-group fa-2x"></div>
+								</div>
+								<h5 class="heading">First-Hand Advice</h5>
+								<div class="body-content">
+									<i class="fa fa-circle-o"></i>
+									<p>From my experience as a personal trainer, I’ve seen firsthand how personalized guidance can transform your fitness journey.</p>
+								</div>
+							</div>
+							<div class="spacer-30"></div>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- APPOINTMENT -->
+	<div class="section bg-overlay-3">
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-sm-12 col-md-12">
+					<div class="wrap-book">
+						<div class="row">
+							<div class="col-sm-5 col-md-5">
+								<div class="bg-appointment"></div>
+							</div>
+							<div class="col-sm-7 col-md-7">
+								<div class="wrap-form">
+									<h2 class="section-heading">
+										CONTACT
+									</h2>
+									<h2 class="reset-section-heading">Free Consultation</h2>
+									<form action="#" class="form-appointment" id="contactForm" data-toggle="validator" novalidate="true">
+										<div class="row">
+											<div class="col-sm-6 col-md-6">
+												<div class="form-group">
+													<input type="text" class="form-control" id="p_name" placeholder="Full Name..." required="">
+													<div class="help-block with-errors"></div>
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-6">
+												<div class="form-group">
+													<input type="email" class="form-control" id="p_email" placeholder="Enter Address..." required="">
+													<div class="help-block with-errors"></div>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" id="p_subject" placeholder="Subject...">
+											<div class="help-block with-errors"></div>
+										</div>
+										<div class="form-group">
+											 <textarea id="p_message" class="form-control" rows="6" placeholder="Write message"></textarea>
+											<div class="help-block with-errors"></div>
+										</div>
+										<div class="form-group">
+											<div id="success"></div>
+											<button type="submit" class="btn btn-primary">SUBMIT MESSAGE</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- STORIES -->
+	<div class="section bg-light">
+		<div class="container">
+			<div id="owl-testimony">
+				<div class="item">
+					<div class="row">
+						<div class="col-sm-5 col-md-5">
+							<h2 class="section-heading">
+								Thoughts by me...
+							</h2>
+							<h2 class="reset-section-heading">Dylan Gemelli Quotes:</h2>
+							<p>"Optimal health is not a destination, it's a journey that requires constant navigation and adjustment."</p>
+							<p>"Fitness is the cornerstone of vitality. Without it, our bodies and minds cannot achieve their full potential."</p>
+							<p>"Understanding TRT is not just about hormone replacement; it's about restoring balance and enhancing quality of life."</p>
+							<p>"Every day presents a new opportunity to improve ourselves. Embrace it with open arms and an eager heart."</p>
+							<div class="spacer-30"></div>
+						</div>
+						<div class="col-sm-7 col-md-7">
+							<div class="about-img">
+								<div class="about-img-top">
+									<iframe style="border-radius:20px;" width="560" height="315" src="https://www.youtube.com/embed/Y2FmyEVCBJk?si=doZW0_RZbTTRbOZq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="section blog">
+		<div class="container">
+			<div class="row">
+				
+				<div class="col-sm-12 col-md-12">
+					<h2 class="section-heading">Connect with Me</h2>
+				</div>
+
+				<div class="clearfix"></div>
+
+				<div class="col-sm-4 col-md-4">
+					<!-- BOX 1 -->
+					<div class="box-news-1">
+						<div class="media gbr">
+							<a target="_blank" href="https://www.youtube.com/@DylanGemelliBiohacking"><img src="images/youtube-bg.jpg" alt="" class="img-responsive"></a>
+						</div>
+						<div class="body">
+							<div class="title"><a target="_blank" href="https://www.youtube.com/@DylanGemelliBiohacking" title="">Dylan Gemelli Biohacking</a></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-4 col-md-4">
+					<!-- BOX 1 -->
+					<div class="box-news-1">
+						<div class="media gbr">
+							<a target="_blank" href="https://podcasts.apple.com/us/podcast/the-dylan-gemelli-podcast/id1780873400"><img src="images/apple-bg.jpg" alt="" class="img-responsive"></a>
+						</div>
+						<div class="body">
+							<div class="title"><a target="_blank" href="https://podcasts.apple.com/us/podcast/the-dylan-gemelli-podcast/id1780873400" title="">Apple Podcasts</a></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-4 col-md-4">
+					<!-- BOX 1 -->
+					<div class="box-news-1">
+						<div class="media gbr">
+							<a target="_blank" href="https://open.spotify.com/show/3In4QlJj4IvHqq0eduKj7m"><img src="images/spotify-bg.jpg" alt="" class="img-responsive"></a>
+						</div>
+						<div class="body">
+							<div class="title"><a target="_blank" href="https://open.spotify.com/show/3In4QlJj4IvHqq0eduKj7m" title="">Podcast on Spotify</a></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- CTA -->
+	<div class="section cta section-no-padding pd30">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-12">
+					<div class="cta-1">
+		              	<div class="body-text">
+		                	<h3>Are You Ready For Coach Training?</h3>
+		              	</div>
+		              	<div class="body-action">
+		                	<a href="/contact" class="btn btn-primary">Connect With Me</a>
+		              	</div>
+		            </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- FOOTER SECTION -->
+	<div class="footer">
+		
+		<div class="fcopy">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-12">
+						<p class="ftex">&copy; 2025 DylanGemelli.com - All Rights Reserved.</p> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- JS VENDOR -->
+	<script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+	<script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.superslides.js"></script>
+	<!--<script type="text/javascript" src="js/vendor/owl.carousel.js"></script>-->
+	<script type="text/javascript" src="js/vendor/bootstrap-dropdownhover.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery.magnific-popup.min.js"></script>
+	<!-- SENDMAIL -->
+	<script type="text/javascript" src="js/vendor/validator.min.js"></script>
+	<script type="text/javascript" src="js/vendor/form-scripts.js"></script>
+	<script type='text/javascript' src='https://maps.google.com/maps/api/js?sensor=false&#038;ver=4.1.5'></script>
+	<script type="text/javascript" src="js/script.js"></script>	
+</body>
 </html>
